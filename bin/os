@@ -18,7 +18,7 @@ DISTRO="$RELEASE"
 
 # Reference: https://distrowatch.com/dwres.php?resource=package-management
 
-if [[ $DISTRO =~ 'Debian' || $DISTRO =~ 'Ubuntu'  ]]
+if [[ $DISTRO =~ 'Debian' || $DISTRO =~ 'Ubuntu' || $DISTRO =~ 'Pop!_OS' ]]
 then
   REFRESH='apt-get update; [[ `command -v apt-file` ]] && apt-file update'
   LIST='dpkg -l'
