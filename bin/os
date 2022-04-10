@@ -78,6 +78,21 @@ then
   DISTRO_UPGRADE=''
 fi
 
+if [[ $DISTRO =~ 'Void' ]]
+then
+  REFRESH='xbps-install -S'
+  LIST='xbps-query -l'
+  SHOW=''
+  SEARCH='xbps-query -Rs'
+  REGEX_SEARCH='xbps-query -Rs'
+  PATH_SEARCH='xbps-query -o'
+  INSTALL='xbps-install'
+  REMOVE='xbps-remove'
+  UPGRADE='xbps-install -u'
+  FULL_UPGRADE=''
+  DISTRO_UPGRADE='xbps-install -Su'
+fi
+
 if [[ $# -eq 0 ]]
 then
   echo "$DISTRO"
