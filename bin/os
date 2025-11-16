@@ -165,7 +165,7 @@ while [[ $# -gt 0 ]]; do
     -s|--search)
       [[ $SEARCH ]] || exit 1;
       echo "SEARCHING PACKAGES..."
-	  shift
+      shift
       echo $SEARCH $@
       $SEARCH $@
       break
@@ -173,7 +173,7 @@ while [[ $# -gt 0 ]]; do
     -g|--grep)
       [[ $REGEX_SEARCH ]] || exit 1;
       echo "SEARCHING PACKAGES FOR PATTERNS..."
-	  shift
+      shift
       echo $REGEX_SEARCH $@
       $REGEX_SEARCH $@
       break
@@ -181,7 +181,7 @@ while [[ $# -gt 0 ]]; do
     -p|--path)
       [[ $PATH_SEARCH ]] || exit 1;
       echo "SEARCHING PACKAGES FOR FILE PATHS..."
-	  shift
+      shift
       echo $PATH_SEARCH $@
       bash -c "$PATH_SEARCH $@"
       break
@@ -189,7 +189,7 @@ while [[ $# -gt 0 ]]; do
     -i|--install)
       [[ $INSTALL ]] || exit 1;
       echo "INSTALLING PACKAGES..."
-	  shift
+      shift
       echo $INSTALL $@
       $INSTALL $@
       break
@@ -197,7 +197,7 @@ while [[ $# -gt 0 ]]; do
     -r|--remove)
       [[ $REMOVE ]] || exit 1;
       echo "REMOVING PACKAGES..."
-	  shift
+      shift
       echo $REMOVE $@
       $REMOVE $@
       break
@@ -205,7 +205,7 @@ while [[ $# -gt 0 ]]; do
     -u|--upgrade)
       [[ $UPGRADE ]] || exit 1;
       echo "UPGRADING PACKAGES..."
-	  shift
+      shift
       echo $UPGRADE $@
       $UPGRADE $@
       break
@@ -213,7 +213,7 @@ while [[ $# -gt 0 ]]; do
     -f|--full-upgrade)
       [[ $FULL_UPGRADE ]] || exit 1;
       echo "UPGRADING PACKAGES AND REMOVING OLD DEPENDENCIES..."
-	  shift
+      shift
       echo $FULL_UPGRADE $@
       $FULL_UPGRADE $@
       break
@@ -221,7 +221,7 @@ while [[ $# -gt 0 ]]; do
     -d|--distro-upgrade|--distribution-upgrade)
       [[ $DISTRO_UPGRADE ]] || exit 1;
       echo "UPGRADING DISTRIBUTION..."
-	  shift
+      shift
       echo $DISTRO_UPGRADE $@
       $DISTRO_UPGRADE $@
       break
